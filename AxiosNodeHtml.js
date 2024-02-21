@@ -9,8 +9,8 @@ var bodyParser = require('body-parser');
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
-//const base_url = "http://localhost:3000";
-const base_url = "http://node41091-noderest.proen.app.ruk-com.cloud";
+const base_url = "http://localhost:3000";
+//const base_url = "http://node41091-noderest.proen.app.ruk-com.cloud";
 
 // Set the template engine
 app.set('view engine', 'ejs');
@@ -26,7 +26,7 @@ app.get("/", async (req, res) => {
         res.render("books", { books: response.data });
     } catch (err) {
         console.error(err);
-        res.status(500).send('Error');
+        res.status(500).send('Error Access RootWEB');
     }
 });
 
